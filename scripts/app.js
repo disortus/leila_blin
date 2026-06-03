@@ -26,6 +26,7 @@
         if (isDesktop) {
             desktopBehavior.initDesktopBehavior({
                 btnNo: ui.btnNo,
+                btnYes: ui.btnYes,
                 stage: ui.stage
             });
         }

@@ -10,7 +10,6 @@
         }
 
         function getBlockedAreas() {
-            var stageLimits = utils.getStageLimits(stage, btnNo);
             var yesRect = btnYes.getBoundingClientRect();
             var stageRect = stage.getBoundingClientRect();
             var safeOffset = 12;
@@ -23,15 +22,26 @@
             }];
         }
 
+        function getMinimumMoveDistance() {
+            var stageRect = stage.getBoundingClientRect();
+            var maxDimension = Math.max(stageRect.width, stageRect.height);
+
+            return Math.max(120, Math.min(maxDimension * 0.35, 180));
+        }
+
         function handleTouchStart(event) {
             event.preventDefault();
-            utils.moveButtonAvoidingAreas(btnNo, getMobileLimits(), getBlockedAreas());
+            utils.moveButtonAvoidingAreas(btnNo, getMobileLimits(), getBlockedAreas(), {
+                minDistance: getMinimumMoveDistance()
+            });
         }
 
         btnNo.addEventListener('touchstart', handleTouchStart, { passive: false });
         btnNo.addEventListener('click', function (event) {
             event.preventDefault();
-            utils.moveButtonAvoidingAreas(btnNo, getMobileLimits(), getBlockedAreas());
+            utils.moveButtonAvoidingAreas(btnNo, getMobileLimits(), getBlockedAreas(), {
+                minDistance: getMinimumMoveDistance()
+            });
         });
     }
 

@@ -1,4 +1,11 @@
 @layer responsive {
+    @media (min-width: 721px) {
+        :root {
+            --card-width: min(96vw, 58rem);
+            --stage-height: 24rem;
+        }
+    }
+
     @media (max-width: 720px) {
         :root {
             --stage-height: 15rem;
