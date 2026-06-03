@@ -1,0 +1,62 @@
+@layer responsive {
+    @media (max-width: 720px) {
+        :root {
+            --stage-height: 13rem;
+            --button-width: 7.8rem;
+            --button-height: 3.25rem;
+        }
+
+        .card {
+            padding: var(--space-xl) var(--space-lg);
+        }
+
+        .button-stage {
+            margin-top: var(--space-lg);
+        }
+
+        .button--yes {
+            left: calc(50% - var(--button-width) - 0.35rem);
+        }
+
+        .button--no {
+            left: calc(50% + 0.35rem);
+        }
+    }
+
+    @media (max-width: 520px) {
+        :root {
+            --stage-height: 15rem;
+        }
+
+        .page {
+            padding: var(--space-md);
+        }
+
+        .card {
+            border-radius: 22px;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .title {
+            font-size: clamp(1.6rem, 7vw, 2rem);
+        }
+
+        .hint {
+            font-size: 0.92rem;
+        }
+
+        .button {
+            top: auto;
+            bottom: 1rem;
+            width: calc(50% - 0.5rem);
+        }
+
+        .button--yes {
+            left: 0;
+        }
+
+        .button--no {
+            left: calc(50% + 0.5rem);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@layer states {
+    .card.is-success .title {
+        color: #da2f70;
+    }
+
+    .card.is-success .button-stage,
+    .card.is-success .hint {
+        display: none;
+    }
+}

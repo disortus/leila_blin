@@ -1,0 +1,35 @@
+@layer tokens {
+    :root {
+        --color-bg-start: #fff5fb;
+        --color-bg-end: #f4f7ff;
+        --color-surface: rgba(255, 255, 255, 0.84);
+        --color-surface-border: rgba(255, 255, 255, 0.58);
+        --color-text: #2e2444;
+        --color-text-muted: #776d8f;
+        --color-shadow: rgba(110, 86, 159, 0.18);
+        --color-yes: linear-gradient(135deg, #41c97b, #239f58);
+        --color-no: linear-gradient(135deg, #ff7b96, #f14867);
+
+        --font-family: Arial, sans-serif;
+
+        --radius-card: 28px;
+        --radius-button: 16px;
+
+        --space-2xs: 0.25rem;
+        --space-xs: 0.5rem;
+        --space-sm: 0.75rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+        --space-2xl: 3rem;
+
+        --card-width: min(92vw, 42rem);
+        --stage-height: 11rem;
+        --button-width: 8.5rem;
+        --button-height: 3.5rem;
+
+        --shadow-card: 0 24px 60px var(--color-shadow);
+        --shadow-button: 0 12px 24px rgba(45, 35, 65, 0.18);
+        --transition-fast: 180ms ease;
+    }
+}

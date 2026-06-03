@@ -1,0 +1,25 @@
+@layer layout {
+    .page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: var(--space-lg);
+    }
+
+    .card {
+        width: var(--card-width);
+        padding: var(--space-2xl);
+        border: 1px solid var(--color-surface-border);
+        border-radius: var(--radius-card);
+        background: var(--color-surface);
+        box-shadow: var(--shadow-card);
+        backdrop-filter: blur(18px);
+        text-align: center;
+    }
+
+    .button-stage {
+        position: relative;
+        min-height: var(--stage-height);
+        margin-top: var(--space-xl);
+    }
+}

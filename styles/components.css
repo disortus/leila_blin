@@ -1,0 +1,62 @@
+@layer components {
+    .eyebrow {
+        margin-bottom: var(--space-sm);
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .title {
+        max-width: 24rem;
+        margin-inline: auto;
+        font-size: clamp(1.85rem, 4vw, 2.6rem);
+        line-height: 1.2;
+    }
+
+    .hint {
+        margin-top: var(--space-lg);
+        color: var(--color-text-muted);
+        font-size: 0.98rem;
+    }
+
+    .button {
+        position: absolute;
+        top: 1.75rem;
+        width: var(--button-width);
+        min-height: var(--button-height);
+        padding: var(--space-sm) var(--space-lg);
+        border: none;
+        border-radius: var(--radius-button);
+        color: #fff;
+        font-size: 1.05rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: var(--shadow-button);
+        transition:
+            transform var(--transition-fast),
+            filter var(--transition-fast),
+            left 140ms ease,
+            top 140ms ease;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .button:hover {
+        filter: brightness(1.04);
+    }
+
+    .button:active {
+        transform: scale(0.97);
+    }
+
+    .button--yes {
+        left: calc(50% - var(--button-width) - 0.75rem);
+        background: var(--color-yes);
+    }
+
+    .button--no {
+        left: calc(50% + 0.75rem);
+        background: var(--color-no);
+    }
+}
