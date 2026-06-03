@@ -3,8 +3,7 @@
         color: #da2f70;
     }
 
-    .card.is-success .button-stage,
-    .card.is-success .hint {
+    .card.is-success .button-stage {
         display: none;
     }
 }

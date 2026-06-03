@@ -19,6 +19,7 @@
 
     .button-stage {
         position: relative;
+        width: 100%;
         min-height: var(--stage-height);
         margin-top: var(--space-xl);
     }
