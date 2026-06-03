@@ -26,7 +26,7 @@
             var stageRect = stage.getBoundingClientRect();
             var maxDimension = Math.max(stageRect.width, stageRect.height);
 
-            return Math.max(120, Math.min(maxDimension * 0.35, 180));
+            return Math.max(180, Math.min(maxDimension * 0.65, 280));
         }
 
         function handleTouchStart(event) {
