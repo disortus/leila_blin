@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопрос для Лейлы</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .buttons {
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+        button {
+            padding: 12px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #btnYes {
+            background-color: #4caf50;
+            color: white;
+            position: absolute;
+            left: 35%;
+            top: 20%;
+            transform: translateX(-50%);
+        }
+        #btnNo {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+            left: 65%;
+            top: 20%;
+            transform: translateX(-50%);
+            /* Плавное движение кнопки */
+            transition: top 0.1s ease, left 0.1s ease; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="question">Лейла я тебе нравлюсь? 😏</h1>
+    
+    <div class="buttons">
+        <button id="btnYes" onclick="sayYes()">Да</button>
+        <!-- Кнопка среагирует и на мышку (компьютер), и на прикосновение (телефон) -->
+        <button id="btnNo" onmouseover="moveButton()" ontouchstart="moveButton()">Нет</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btnNo = document.getElementById('btnNo');
+            
+            // Вычисляем случайные координаты в пределах экрана
+            const x = Math.random() * (window.innerWidth - btnNo.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btnNo.offsetHeight - 100);
+            
+            // Меняем позиционирование на fixed, чтобы кнопка летала по всему экрану
+            btnNo.style.position = 'fixed';
+            btnNo.style.left = x + 'px';
+            btnNo.style.top = y + 'px';
+        }
+
+        function sayYes() {
+            // Меняем текст на твой вариант
+            document.getElementById('question').innerHTML = "Я ТАК И ЗНАЛ Я НРАВЛЮСЬ ТЕБЕ❤️❤️❤️";
+            // Прячем обе кнопки
+            document.getElementById('btnYes').style.display = 'none';
+            document.getElementById('btnNo').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
